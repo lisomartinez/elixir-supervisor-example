@@ -1,4 +1,4 @@
-defmodule SequenceSup do
+defmodule Sequence do
   @moduledoc """
   Documentation for `SequenceSup`.
   """
@@ -8,7 +8,7 @@ defmodule SequenceSup do
 
   ## Examples
 
-      iex> SequenceSup.hello()
+      iex> Sequence.hello()
       :world
 
   """

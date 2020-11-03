@@ -1,9 +1,9 @@
-defmodule SequenceSup.MixProject do
+defmodule Sequence.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :sequence_sup,
+      app: :sequence,
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
@@ -15,7 +15,7 @@ defmodule SequenceSup.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {SequenceSup.Application, []}
+      mod: {Sequence.Application, []}
     ]
   end
 

@@ -1,4 +1,4 @@
-defmodule SequenceSup.Application do
+defmodule Sequence.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,13 +8,14 @@ defmodule SequenceSup.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: SequenceSup.Worker.start_link(arg)
-      # {SequenceSup.Worker, arg}
+      # Starts a worker by calling: Sequence.Worker.start_link(arg)
+      # {Sequence.Worker, arg}
+      {Sequence.Server, 123}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: SequenceSup.Supervisor]
+    opts = [strategy: :one_for_one, name: Sequence.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

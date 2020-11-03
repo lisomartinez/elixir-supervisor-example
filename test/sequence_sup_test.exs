@@ -1,8 +1,8 @@
-defmodule SequenceSupTest do
+defmodule SequenceTest do
   use ExUnit.Case
-  doctest SequenceSup
+  doctest Sequence
 
   test "greets the world" do
-    assert SequenceSup.hello() == :world
+    assert Sequence.hello() == :world
   end
 end
